@@ -7,13 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F33BB4E818515AE600EC63DA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33BB4E718515AE600EC63DA /* WebKit.framework */; };
+		F33BB4EE185288CC00EC63DA /* SettingsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F33BB4EB185288CC00EC63DA /* SettingsViewController.h */; };
+		F33BB4EF185288CC00EC63DA /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F33BB4EC185288CC00EC63DA /* SettingsViewController.m */; };
+		F33BB4F0185288CC00EC63DA /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F33BB4ED185288CC00EC63DA /* SettingsViewController.xib */; };
+		F33BB4F3185289C500EC63DA /* WeHeartItLogo.h in Headers */ = {isa = PBXBuildFile; fileRef = F33BB4F1185289C500EC63DA /* WeHeartItLogo.h */; };
+		F33BB4F4185289C500EC63DA /* WeHeartItLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = F33BB4F2185289C500EC63DA /* WeHeartItLogo.m */; };
+		F33BB4FA18528EDB00EC63DA /* NSImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F33BB4F818528EDB00EC63DA /* NSImageView+AFNetworking.h */; };
+		F33BB4FB18528EDB00EC63DA /* NSImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F33BB4F918528EDB00EC63DA /* NSImageView+AFNetworking.m */; };
 		F37B5EFB18446DC100294E39 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B5EFA18446DC100294E39 /* Cocoa.framework */; };
 		F37B5EFD18446DC100294E39 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B5EFC18446DC100294E39 /* ScreenSaver.framework */; };
 		F37B5F0718446DC100294E39 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F37B5F0518446DC100294E39 /* InfoPlist.strings */; };
 		F37B5F0B18446DC100294E39 /* WeHeartItScreensaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = F37B5F0A18446DC100294E39 /* WeHeartItScreensaverView.m */; };
+		F37B5F12184470D400294E39 /* We Heart It Screensaver.saver in CopyFiles */ = {isa = PBXBuildFile; fileRef = F37B5EF718446DC100294E39 /* We Heart It Screensaver.saver */; };
+		F37B5F1A1844787500294E39 /* OptionsPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37B5F191844787500294E39 /* OptionsPanel.xib */; };
+		F39401DA185123D30064EA9E /* OptionsPanelWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = F39401D8185123D30064EA9E /* OptionsPanelWindowController.h */; };
+		F39401DB185123D30064EA9E /* OptionsPanelWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39401D9185123D30064EA9E /* OptionsPanelWindowController.m */; };
+		F39401DF185141050064EA9E /* LoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F39401DD185141050064EA9E /* LoginViewController.h */; };
+		F39401E0185141050064EA9E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F39401DE185141050064EA9E /* LoginViewController.m */; };
+		F39401E2185141E20064EA9E /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39401E1185141E20064EA9E /* LoginView.xib */; };
+		FD5296F7FAA645B183E20866 /* libPods-We Heart It Screensaver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E792AADC1CE4DDD8621B255 /* libPods-We Heart It Screensaver.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F37B5F111844700000294E39 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "~/Library/Screen Savers";
+			dstSubfolderSpec = 0;
+			files = (
+				F37B5F12184470D400294E39 /* We Heart It Screensaver.saver in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1E792AADC1CE4DDD8621B255 /* libPods-We Heart It Screensaver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-We Heart It Screensaver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AA7C3564DB24CCC926E4541 /* Pods-We Heart It Screensaver.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-We Heart It Screensaver.xcconfig"; path = "Pods/Pods-We Heart It Screensaver.xcconfig"; sourceTree = "<group>"; };
+		F33BB4E718515AE600EC63DA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F33BB4EB185288CC00EC63DA /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Options/Views/SettingsViewController/SettingsViewController.h; sourceTree = "<group>"; };
+		F33BB4EC185288CC00EC63DA /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Options/Views/SettingsViewController/SettingsViewController.m; sourceTree = "<group>"; };
+		F33BB4ED185288CC00EC63DA /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = Options/Views/SettingsViewController/SettingsViewController.xib; sourceTree = "<group>"; };
+		F33BB4F1185289C500EC63DA /* WeHeartItLogo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeHeartItLogo.h; path = "Custom Assets/WeHeartItLogo.h"; sourceTree = "<group>"; };
+		F33BB4F2185289C500EC63DA /* WeHeartItLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeHeartItLogo.m; path = "Custom Assets/WeHeartItLogo.m"; sourceTree = "<group>"; };
+		F33BB4F818528EDB00EC63DA /* NSImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSImageView+AFNetworking.h"; path = "Classes/Categories/NSImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		F33BB4F918528EDB00EC63DA /* NSImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSImageView+AFNetworking.m"; path = "Classes/Categories/NSImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		F37B5EF718446DC100294E39 /* We Heart It Screensaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "We Heart It Screensaver.saver"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37B5EFA18446DC100294E39 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F37B5EFC18446DC100294E39 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
@@ -25,6 +64,12 @@
 		F37B5F0818446DC100294E39 /* We Heart It Screensaver-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "We Heart It Screensaver-Prefix.pch"; sourceTree = "<group>"; };
 		F37B5F0918446DC100294E39 /* WeHeartItScreensaverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeHeartItScreensaverView.h; sourceTree = "<group>"; };
 		F37B5F0A18446DC100294E39 /* WeHeartItScreensaverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeHeartItScreensaverView.m; sourceTree = "<group>"; };
+		F37B5F191844787500294E39 /* OptionsPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OptionsPanel.xib; path = Options/OptionsPanel.xib; sourceTree = "<group>"; };
+		F39401D8185123D30064EA9E /* OptionsPanelWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OptionsPanelWindowController.h; path = Options/OptionsPanelWindowController.h; sourceTree = "<group>"; };
+		F39401D9185123D30064EA9E /* OptionsPanelWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OptionsPanelWindowController.m; path = Options/OptionsPanelWindowController.m; sourceTree = "<group>"; };
+		F39401DD185141050064EA9E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = Options/Views/LoginViewController.h; sourceTree = "<group>"; };
+		F39401DE185141050064EA9E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = Options/Views/LoginViewController.m; sourceTree = "<group>"; };
+		F39401E1185141E20064EA9E /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginView.xib; path = Options/Views/LoginView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,20 +77,69 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F33BB4E818515AE600EC63DA /* WebKit.framework in Frameworks */,
 				F37B5EFD18446DC100294E39 /* ScreenSaver.framework in Frameworks */,
 				F37B5EFB18446DC100294E39 /* Cocoa.framework in Frameworks */,
+				FD5296F7FAA645B183E20866 /* libPods-We Heart It Screensaver.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F33BB4E9185286F100EC63DA /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F39401DD185141050064EA9E /* LoginViewController.h */,
+				F39401DE185141050064EA9E /* LoginViewController.m */,
+				F39401E1185141E20064EA9E /* LoginView.xib */,
+			);
+			name = LoginViewController;
+			sourceTree = "<group>";
+		};
+		F33BB4EA185286F700EC63DA /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F33BB4EB185288CC00EC63DA /* SettingsViewController.h */,
+				F33BB4EC185288CC00EC63DA /* SettingsViewController.m */,
+				F33BB4ED185288CC00EC63DA /* SettingsViewController.xib */,
+			);
+			name = SettingsViewController;
+			sourceTree = "<group>";
+		};
+		F33BB4F5185289CB00EC63DA /* Custom Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F33BB4F1185289C500EC63DA /* WeHeartItLogo.h */,
+				F33BB4F2185289C500EC63DA /* WeHeartItLogo.m */,
+			);
+			name = "Custom Assets";
+			sourceTree = "<group>";
+		};
+		F33BB4F618528E7E00EC63DA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F33BB4FC18528EDF00EC63DA /* Categories */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		F33BB4FC18528EDF00EC63DA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F33BB4F818528EDB00EC63DA /* NSImageView+AFNetworking.h */,
+				F33BB4F918528EDB00EC63DA /* NSImageView+AFNetworking.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		F37B5EEC18446DC100294E39 = {
 			isa = PBXGroup;
 			children = (
 				F37B5F0218446DC100294E39 /* We Heart It Screensaver */,
 				F37B5EF918446DC100294E39 /* Frameworks */,
 				F37B5EF818446DC100294E39 /* Products */,
+				9AA7C3564DB24CCC926E4541 /* Pods-We Heart It Screensaver.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,9 +154,11 @@
 		F37B5EF918446DC100294E39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F33BB4E718515AE600EC63DA /* WebKit.framework */,
 				F37B5EFA18446DC100294E39 /* Cocoa.framework */,
 				F37B5EFC18446DC100294E39 /* ScreenSaver.framework */,
 				F37B5EFE18446DC100294E39 /* Other Frameworks */,
+				1E792AADC1CE4DDD8621B255 /* libPods-We Heart It Screensaver.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,9 +176,12 @@
 		F37B5F0218446DC100294E39 /* We Heart It Screensaver */ = {
 			isa = PBXGroup;
 			children = (
+				F33BB4F618528E7E00EC63DA /* Classes */,
+				F37B5F131844774B00294E39 /* Options */,
 				F37B5F0918446DC100294E39 /* WeHeartItScreensaverView.h */,
 				F37B5F0A18446DC100294E39 /* WeHeartItScreensaverView.m */,
 				F37B5F0318446DC100294E39 /* Supporting Files */,
+				F33BB4F5185289CB00EC63DA /* Custom Assets */,
 			);
 			path = "We Heart It Screensaver";
 			sourceTree = "<group>";
@@ -97,6 +196,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F37B5F131844774B00294E39 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				F39401DC1851402C0064EA9E /* Views */,
+				F37B5F191844787500294E39 /* OptionsPanel.xib */,
+				F39401D8185123D30064EA9E /* OptionsPanelWindowController.h */,
+				F39401D9185123D30064EA9E /* OptionsPanelWindowController.m */,
+			);
+			name = Options;
+			sourceTree = "<group>";
+		};
+		F39401DC1851402C0064EA9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F33BB4EA185286F700EC63DA /* SettingsViewController */,
+				F33BB4E9185286F100EC63DA /* LoginViewController */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,6 +223,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F39401DA185123D30064EA9E /* OptionsPanelWindowController.h in Headers */,
+				F39401DF185141050064EA9E /* LoginViewController.h in Headers */,
+				F33BB4EE185288CC00EC63DA /* SettingsViewController.h in Headers */,
+				F33BB4FA18528EDB00EC63DA /* NSImageView+AFNetworking.h in Headers */,
+				F33BB4F3185289C500EC63DA /* WeHeartItLogo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,11 +238,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F37B5F0E18446DC100294E39 /* Build configuration list for PBXNativeTarget "We Heart It Screensaver" */;
 			buildPhases = (
+				976AA82BC33F4362A36D1457 /* Check Pods Manifest.lock */,
 				F37B5EF118446DC100294E39 /* Sources */,
 				F37B5EF218446DC100294E39 /* Frameworks */,
 				F37B5EF318446DC100294E39 /* Headers */,
 				F37B5EF418446DC100294E39 /* Resources */,
 				F37B5EF518446DC100294E39 /* Rez */,
+				F37B5F111844700000294E39 /* CopyFiles */,
+				338057F204C84EAC886B30ED /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,7 +287,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F37B5F1A1844787500294E39 /* OptionsPanel.xib in Resources */,
 				F37B5F0718446DC100294E39 /* InfoPlist.strings in Resources */,
+				F39401E2185141E20064EA9E /* LoginView.xib in Resources */,
+				F33BB4F0185288CC00EC63DA /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,12 +306,50 @@
 		};
 /* End PBXRezBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		338057F204C84EAC886B30ED /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-We Heart It Screensaver-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		976AA82BC33F4362A36D1457 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F37B5EF118446DC100294E39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F37B5F0B18446DC100294E39 /* WeHeartItScreensaverView.m in Sources */,
+				F39401DB185123D30064EA9E /* OptionsPanelWindowController.m in Sources */,
+				F33BB4F4185289C500EC63DA /* WeHeartItLogo.m in Sources */,
+				F39401E0185141050064EA9E /* LoginViewController.m in Sources */,
+				F33BB4FB18528EDB00EC63DA /* NSImageView+AFNetworking.m in Sources */,
+				F33BB4EF185288CC00EC63DA /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +437,7 @@
 		};
 		F37B5F0F18446DC100294E39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AA7C3564DB24CCC926E4541 /* Pods-We Heart It Screensaver.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -282,6 +451,7 @@
 		};
 		F37B5F1018446DC100294E39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AA7C3564DB24CCC926E4541 /* Pods-We Heart It Screensaver.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -312,6 +482,7 @@
 				F37B5F1018446DC100294E39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

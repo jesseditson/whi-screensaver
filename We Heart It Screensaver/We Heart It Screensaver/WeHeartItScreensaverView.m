@@ -8,6 +8,13 @@
 
 #import "WeHeartItScreensaverView.h"
 
+@interface WeHeartItScreensaverView()
+{
+    OptionsPanelWindowController *optionsPanelWindowController;
+}
+
+@end
+
 @implementation WeHeartItScreensaverView
 
 - (id)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
@@ -54,7 +61,18 @@
 
 - (NSWindow*)configureSheet
 {
-    return nil;
+    if (!optionsPanelWindowController) {
+        optionsPanelWindowController = [OptionsPanelWindowController controller];
+        optionsPanelWindowController.delegate = self;
+    }
+    return optionsPanelWindowController.panel;
+}
+
+# pragma mark - OptionsPanelWindowControllerDelegate
+
+- (void)dismissWindow
+{
+    [NSApp endSheet:optionsPanelWindowController.panel];
 }
 
 @end

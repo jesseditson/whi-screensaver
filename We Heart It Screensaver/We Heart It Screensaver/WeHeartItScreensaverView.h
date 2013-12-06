@@ -7,7 +7,8 @@
 //
 
 #import <ScreenSaver/ScreenSaver.h>
+#import "OptionsPanelWindowController.h"
 
-@interface WeHeartItScreensaverView : ScreenSaverView
+@interface WeHeartItScreensaverView : ScreenSaverView <OptionsPanelWindowControllerDelegate>
 
 @end
