@@ -7,10 +7,12 @@
 //
 
 #import "WeHeartItScreensaverView.h"
+#import "ApiClient.h"
 
 @interface WeHeartItScreensaverView()
 {
     OptionsPanelWindowController *optionsPanelWindowController;
+    ImageGenerator *imageGenerator;
 }
 
 @end
@@ -22,6 +24,9 @@
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {
         [self setAnimationTimeInterval:1/30.0];
+        [ApiClient initialize];
+        imageGenerator = [[ImageGenerator alloc] init];
+        imageGenerator.delegate = self;
     }
     return self;
 }
@@ -73,6 +78,13 @@
 - (void)dismissWindow
 {
     [NSApp endSheet:optionsPanelWindowController.panel];
+}
+
+#pragma mark - ImageGeneratorDelegate
+
+- (void)imagesLoaded:(NSArray *)images
+{
+    NSLog(@"Loaded images: %@",images);
 }
 
 @end

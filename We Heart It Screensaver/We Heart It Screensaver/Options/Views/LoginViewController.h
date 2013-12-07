@@ -24,6 +24,8 @@
 @property (strong) IBOutlet NSProgressIndicator *loadingSpinner;
 @property (strong) IBOutlet NSTextField *errorLabel;
 
+- (void)logOut;
+
 - (IBAction)signInPressed:(id)sender;
 
 @end

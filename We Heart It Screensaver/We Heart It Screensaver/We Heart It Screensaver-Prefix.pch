@@ -10,3 +10,8 @@
 
 #define WHI_CLIENT_ID @"a632eaade31d4c061f894719639328c3496797b4c8acf49d1965bb2b6011a549"
 #define WHI_CLIENT_SECRET @"1012a6e07f22626e2873b58c3940798dab42d18e85477fc0b1b591148a72a8c8"
+
+
+#define API_LOG_EXTENDED true
+#define ERROR_DOMAIN @"com.weheartit.WeHeartItScreenSaver"
+#define WHI_API_BASE_PATH @"https://api.weheartit.com/api/"

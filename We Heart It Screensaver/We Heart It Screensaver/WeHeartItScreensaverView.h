@@ -8,7 +8,8 @@
 
 #import <ScreenSaver/ScreenSaver.h>
 #import "OptionsPanelWindowController.h"
+#import "ImageGenerator.h"
 
-@interface WeHeartItScreensaverView : ScreenSaverView <OptionsPanelWindowControllerDelegate>
+@interface WeHeartItScreensaverView : ScreenSaverView <OptionsPanelWindowControllerDelegate,ImageGeneratorDelegate>
 
 @end

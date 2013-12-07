@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="mainView" destination="1Yq-af-TsR" id="STk-ta-I41"/>
                 <outlet property="panel" destination="1" id="hAv-pm-KFa"/>
+                <outlet property="progressIndicator" destination="8YR-Gm-z4V" id="KzV-Jm-Uiq"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
@@ -51,6 +52,10 @@
                         <rect key="frame" x="166" y="360" width="148" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </customView>
+                    <progressIndicator horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" id="8YR-Gm-z4V">
+                        <rect key="frame" x="444" y="382" width="16" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </progressIndicator>
                 </subviews>
             </view>
         </window>

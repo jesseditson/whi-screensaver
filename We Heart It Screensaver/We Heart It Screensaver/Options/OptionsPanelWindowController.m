@@ -11,6 +11,7 @@
 @interface OptionsPanelWindowController()
 
 @property (strong) LoginViewController *loginViewController;
+@property (strong) SettingsViewController *settingsViewController;
 
 @end
 
@@ -40,12 +41,41 @@
         _loginViewController = [[LoginViewController alloc] init];
         _loginViewController.delegate = self;
         [self.mainView addSubview:_loginViewController.view];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showLoading:) name:@"api:loading" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showError:) name:@"api:error" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showComplete:) name:@"api:complete" object:nil];
+        [self.progressIndicator setHidden:YES];
     }
 }
 
-- (void)showLoggedInView
+- (void) dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)showLoading:(NSNotification *)notification
+{
+    [self.progressIndicator setHidden:NO];
+    [self.progressIndicator startAnimation:nil];
+}
+- (void)showError:(NSNotification *)notification
 {
     
+}
+- (void)showComplete:(NSNotification *)notification
+{
+    [self.progressIndicator setHidden:YES];
+    [self.progressIndicator stopAnimation:nil];
+}
+
+- (void)showSettings
+{
+    if (!_settingsViewController) {
+        _settingsViewController = [[SettingsViewController alloc] init];
+        _settingsViewController.delegate = self;
+    }
+    if(_loginViewController.view.superview) [_loginViewController.view removeFromSuperview];
+    [self.mainView addSubview:_settingsViewController.view];
 }
 
 - (IBAction)cancelSheetAction:(id)sender
@@ -54,6 +84,8 @@
 }
 - (IBAction)okSheetAction:(id)sender
 {
+    // save the current settings
+    [[NSUserDefaults standardUserDefaults] setObject:[_settingsViewController currentSourceInfo] forKey:@"whi-screensaver-settings"];
     [self.delegate dismissWindow];
 }
 
@@ -62,10 +94,19 @@
 - (void)userLoggedIn
 {
     // swap out the view for the logged in view
+    [self showSettings];
 }
 - (void)userLoggedOut
 {
-    // don't think we need to do anything here
+    if(_settingsViewController.view.superview) [_settingsViewController.view removeFromSuperview];
+    [self.mainView addSubview:_loginViewController.view];
+}
+
+#pragma mark - SettingsViewControllerDelegate
+
+- (void)logOut
+{
+    [_loginViewController logOut];
 }
 
 @end

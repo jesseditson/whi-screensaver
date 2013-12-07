@@ -10,6 +10,7 @@
 #import "NXOAuth2AccountStore.h"
 
 #define LOGIN_STATUS_URL_STRING @"http://whi-screensaver.herokuapp.com"
+#define LOG_OUT_URL_STRING @"http://whi-screensaver.herokuapp.com/logout"
 #define REDIRECT_URL_STRING @"http://whi-screensaver.herokuapp.com/auth/weheartit/callback"
 
 @interface LoginViewController()
@@ -17,7 +18,7 @@
     NSMutableData *loginStatusData;
     NSURL *finalLoginStatusUrl;
     BOOL loadingLoginStatus;
-    
+    BOOL loggingOut;
     NSURL *authURL;
 }
 
@@ -46,6 +47,23 @@
     [self updateLoginStatus];
 }
 
+- (void)logOut
+{
+    NSLog(@"requesting: %@",LOG_OUT_URL_STRING);
+    if (loggingOut || loadingLoginStatus) {
+        return;
+    }
+    loggingOut = YES;
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:LOG_OUT_URL_STRING]];
+    __unused NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    // also clear cookies
+    NSHTTPCookieStorage *cookieJar = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    
+    for (NSHTTPCookie *cookie in [cookieJar cookiesForURL:[NSURL URLWithString:LOGIN_STATUS_URL_STRING]]) {
+        [cookieJar deleteCookie:cookie];
+    }
+}
+
 - (void)login
 {
     
@@ -70,7 +88,7 @@
 
 - (void)updateLoginStatus
 {
-    if (loadingLoginStatus) {
+    if (loadingLoginStatus || loggingOut) {
         // TODO: show an error? queue?
         return;
     }
@@ -137,25 +155,31 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     loadingLoginStatus = NO;
+    loggingOut = NO;
     [[NSAlert alertWithError:error] runModal];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    loadingLoginStatus = NO;
-    // LoginStatusData is now the data we're looking for.
-    NSError *parseError;
-    NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:loginStatusData options:NSJSONReadingMutableContainers error:&parseError];
-    if (parseError) {
-        NSLog(@"parse error. %@",[parseError localizedDescription]);
-        // encountered a parse error.
-        [[NSAlert alertWithError:parseError] runModal];
-    } else if(!jsonData){
-        NSLog(@"data error.");
-        [NSAlert alertWithError:[NSError errorWithDomain:@"com.weheartit.WeHeartItScreensaver" code:500 userInfo:@{@"message":@"Malformed Response."}]];
+    if (loggingOut) {
+        loggingOut = NO;
+        [self updateLoginStatus];
     } else {
-        // json data received. Send to login status handler.
-        [self setLoginStatusWithInfo:jsonData];
+        loadingLoginStatus = NO;
+        // LoginStatusData is now the data we're looking for.
+        NSError *parseError;
+        NSDictionary *jsonData = [NSJSONSerialization JSONObjectWithData:loginStatusData options:NSJSONReadingMutableContainers error:&parseError];
+        if (parseError) {
+            NSLog(@"parse error. %@",[parseError localizedDescription]);
+            // encountered a parse error.
+            [[NSAlert alertWithError:parseError] runModal];
+        } else if(!jsonData){
+            NSLog(@"data error.");
+            [NSAlert alertWithError:[NSError errorWithDomain:@"com.weheartit.WeHeartItScreensaver" code:500 userInfo:@{@"message":@"Malformed Response."}]];
+        } else {
+            // json data received. Send to login status handler.
+            [self setLoginStatusWithInfo:jsonData];
+        }
     }
     
 }

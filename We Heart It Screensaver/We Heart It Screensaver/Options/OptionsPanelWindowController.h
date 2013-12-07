@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
 #import "LoginViewController.h"
+#import "SettingsViewController.h"
 
 @protocol OptionsPanelWindowControllerDelegate <NSObject>
 
@@ -16,11 +17,12 @@
 
 @end
 
-@interface OptionsPanelWindowController : NSWindowController <LoginViewControllerDelegate>
+@interface OptionsPanelWindowController : NSWindowController <LoginViewControllerDelegate,SettingsViewControllerDelegate>
 
 @property (strong) IBOutlet NSPanel *panel;
 @property (strong) id<OptionsPanelWindowControllerDelegate> delegate;
 @property (strong) IBOutlet NSView *mainView;
+@property (strong) IBOutlet NSProgressIndicator *progressIndicator;
 
 + (id) controller;
 

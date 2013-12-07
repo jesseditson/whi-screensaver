@@ -15,6 +15,12 @@
 		F33BB4F4185289C500EC63DA /* WeHeartItLogo.m in Sources */ = {isa = PBXBuildFile; fileRef = F33BB4F2185289C500EC63DA /* WeHeartItLogo.m */; };
 		F33BB4FA18528EDB00EC63DA /* NSImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = F33BB4F818528EDB00EC63DA /* NSImageView+AFNetworking.h */; };
 		F33BB4FB18528EDB00EC63DA /* NSImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F33BB4F918528EDB00EC63DA /* NSImageView+AFNetworking.m */; };
+		F33BB4FF1852957500EC63DA /* ApiClient.h in Headers */ = {isa = PBXBuildFile; fileRef = F33BB4FD1852957500EC63DA /* ApiClient.h */; };
+		F33BB5001852957500EC63DA /* ApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F33BB4FE1852957500EC63DA /* ApiClient.m */; };
+		F33BB50318529BAC00EC63DA /* NSURL+QueryStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F33BB50118529BAC00EC63DA /* NSURL+QueryStringAdditions.h */; };
+		F33BB50418529BAC00EC63DA /* NSURL+QueryStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F33BB50218529BAC00EC63DA /* NSURL+QueryStringAdditions.m */; };
+		F33BB5071852B34400EC63DA /* ImageGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = F33BB5051852B34400EC63DA /* ImageGenerator.h */; };
+		F33BB5081852B34400EC63DA /* ImageGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = F33BB5061852B34400EC63DA /* ImageGenerator.m */; };
 		F37B5EFB18446DC100294E39 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B5EFA18446DC100294E39 /* Cocoa.framework */; };
 		F37B5EFD18446DC100294E39 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F37B5EFC18446DC100294E39 /* ScreenSaver.framework */; };
 		F37B5F0718446DC100294E39 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F37B5F0518446DC100294E39 /* InfoPlist.strings */; };
@@ -53,6 +59,12 @@
 		F33BB4F2185289C500EC63DA /* WeHeartItLogo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeHeartItLogo.m; path = "Custom Assets/WeHeartItLogo.m"; sourceTree = "<group>"; };
 		F33BB4F818528EDB00EC63DA /* NSImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSImageView+AFNetworking.h"; path = "Classes/Categories/NSImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		F33BB4F918528EDB00EC63DA /* NSImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSImageView+AFNetworking.m"; path = "Classes/Categories/NSImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		F33BB4FD1852957500EC63DA /* ApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApiClient.h; path = Classes/ApiClient.h; sourceTree = "<group>"; };
+		F33BB4FE1852957500EC63DA /* ApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApiClient.m; path = Classes/ApiClient.m; sourceTree = "<group>"; };
+		F33BB50118529BAC00EC63DA /* NSURL+QueryStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+QueryStringAdditions.h"; path = "Classes/Categories/NSURL+QueryStringAdditions.h"; sourceTree = "<group>"; };
+		F33BB50218529BAC00EC63DA /* NSURL+QueryStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+QueryStringAdditions.m"; path = "Classes/Categories/NSURL+QueryStringAdditions.m"; sourceTree = "<group>"; };
+		F33BB5051852B34400EC63DA /* ImageGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageGenerator.h; path = Classes/ImageGenerator.h; sourceTree = "<group>"; };
+		F33BB5061852B34400EC63DA /* ImageGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageGenerator.m; path = Classes/ImageGenerator.m; sourceTree = "<group>"; };
 		F37B5EF718446DC100294E39 /* We Heart It Screensaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "We Heart It Screensaver.saver"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37B5EFA18446DC100294E39 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F37B5EFC18446DC100294E39 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
@@ -120,6 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				F33BB4FC18528EDF00EC63DA /* Categories */,
+				F33BB4FD1852957500EC63DA /* ApiClient.h */,
+				F33BB4FE1852957500EC63DA /* ApiClient.m */,
+				F33BB5051852B34400EC63DA /* ImageGenerator.h */,
+				F33BB5061852B34400EC63DA /* ImageGenerator.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -129,6 +145,8 @@
 			children = (
 				F33BB4F818528EDB00EC63DA /* NSImageView+AFNetworking.h */,
 				F33BB4F918528EDB00EC63DA /* NSImageView+AFNetworking.m */,
+				F33BB50118529BAC00EC63DA /* NSURL+QueryStringAdditions.h */,
+				F33BB50218529BAC00EC63DA /* NSURL+QueryStringAdditions.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -223,6 +241,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F33BB5071852B34400EC63DA /* ImageGenerator.h in Headers */,
+				F33BB4FF1852957500EC63DA /* ApiClient.h in Headers */,
+				F33BB50318529BAC00EC63DA /* NSURL+QueryStringAdditions.h in Headers */,
 				F39401DA185123D30064EA9E /* OptionsPanelWindowController.h in Headers */,
 				F39401DF185141050064EA9E /* LoginViewController.h in Headers */,
 				F33BB4EE185288CC00EC63DA /* SettingsViewController.h in Headers */,
@@ -346,10 +367,13 @@
 			files = (
 				F37B5F0B18446DC100294E39 /* WeHeartItScreensaverView.m in Sources */,
 				F39401DB185123D30064EA9E /* OptionsPanelWindowController.m in Sources */,
+				F33BB50418529BAC00EC63DA /* NSURL+QueryStringAdditions.m in Sources */,
 				F33BB4F4185289C500EC63DA /* WeHeartItLogo.m in Sources */,
 				F39401E0185141050064EA9E /* LoginViewController.m in Sources */,
 				F33BB4FB18528EDB00EC63DA /* NSImageView+AFNetworking.m in Sources */,
 				F33BB4EF185288CC00EC63DA /* SettingsViewController.m in Sources */,
+				F33BB5081852B34400EC63DA /* ImageGenerator.m in Sources */,
+				F33BB5001852957500EC63DA /* ApiClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
